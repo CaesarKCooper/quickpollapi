@@ -51,7 +51,7 @@ public class VoteController {
     }
 
     @RequestMapping(value = "/polls/votes/{voteId}", method = RequestMethod.DELETE)
-    public ResponseEntity<?> deleteVote(@PathVariable Long voteId, @RequestBody Vote vote){
+    public ResponseEntity<?> deleteVote(@PathVariable Long voteId){
 
         voteService.deleteVote(voteId);
         return new ResponseEntity<>(HttpStatus.OK);
